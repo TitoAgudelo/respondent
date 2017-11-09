@@ -1,14 +1,12 @@
 <div ng-controller="SidebarController as vm">
   <ht-sidebar when-done-animating="vm.sidebarReady()">
-    <div class="sidebar-filler"></div>
-    <div class="sidebar-dropdown"><a href="#">Menu</a></div>
-    <div class="sidebar-inner">
-      <div class="sidebar-widget"></div>
-      <ul class="navi">
-        <li class="nlightblue fade-selection-animation" ng-class="vm.isCurrent(r)" ng-repeat="r in vm.navRoutes">
-          <a ui-sref="{{r.name}}" ng-bind-html="r.settings.content"></a>
-        </li>
-      </ul>
+    <div class="sidebar-header">
+      <a href="/">
+        <img src="images/respondent_logo.png" />
+      </a>
+      <button type="button" class="close" aria-label="Close" onclick="sidebar_close()">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
   </ht-sidebar>
 </div>

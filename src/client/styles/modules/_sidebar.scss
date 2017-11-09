@@ -1,0 +1,45 @@
+#sidebar {
+  background-color: $color-blue-dark;
+  display: none;
+  height: 100%;
+  overflow: auto;
+  padding: 1rem .5rem;
+  position: fixed!important;
+  width: 30%;
+  z-index: 1;
+
+  &.animation-left {
+    animation: animateleft 0.4s;
+  }
+
+  .sidebar-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .close {
+    opacity: 1;
+
+    span {
+      color: $color-white;
+    }
+  }
+}
+
+#main {
+  transition: margin-left .4s;
+}
+
+
+@keyframes animateleft {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}

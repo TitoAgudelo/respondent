@@ -1,0 +1,17 @@
+header {
+  background-color: $color-white;
+  border-top: 3px solid $color-blue;
+
+  .button-open {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    height: 25px;
+    margin-right: 1rem;
+
+    i {
+      color: #888;
+      font-size: 25px;
+    }
+  }
+}
