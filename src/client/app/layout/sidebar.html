@@ -8,5 +8,16 @@
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
+    <div class="organization">
+      <div class="organization-head d-flex justify-content-between align-items-center">Organizations <a href="/organizations"><i class="fa fa-plus" aria-hidden="true"></i></a>
+      </div>
+      <div class="organization-content" data-ng-repeat="item in vm.organizations">
+        <a class="organization-content-link" href="/organizations/{{item.id}}"><img src="{{item.imageUrl}}" /> {{item.slug}}</a>
+        <div class="organization-content-head">Projects</div>
+        <div class="organization-content-list" data-ng-repeat="project in item.projects">
+          <a href="/organizations/project/{{project.id}}">{{project.name}}</a>
+        </div>
+      </div>
+    </div>
   </ht-sidebar>
 </div>

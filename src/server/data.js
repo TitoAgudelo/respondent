@@ -1,5 +1,7 @@
 module.exports = {
-  people: getPeople()
+  people: getPeople(),
+  organizations: getOrganizations(),
+  projects: getProjects()
 };
 
 function getPeople() {
@@ -12,5 +14,41 @@ function getPeople() {
     { id: 6, firstName: 'Landon', lastName: 'Gates', age: 11, location: 'South Carolina' },
     { id: 7, firstName: 'Haley', lastName: 'Guthrie', age: 35, location: 'Wyoming' },
     { id: 8, firstName: 'Aaron', lastName: 'Jinglehiemer', age: 22, location: 'Utah' }
+  ];
+}
+
+function getOrganizations() {
+  return [
+    {
+      id: 1,
+      slug: 'Test',
+      billingEmail: 'titoarturoagudelo@gmail.com',
+      website: 'test@test.com',
+      imageUrl: 'https://s3.amazonaws.com/respondentinc-images/assets/organization_avatar_256.png',
+      location: 'Bogotá, Colombia',
+      plan: {
+        id: 'free',
+        maxUsers: 10,
+        name: 'free',
+        price: 0
+      },
+      projects: [
+        { id: 1, name: 'financial', description: 'test' },
+        { id: 2, name: 'software', description: 'test' },
+        { id: 3, name: 'hardware', description: 'test' },
+        { id: 4, name: 'HR', description: 'test' },
+        { id: 5, name: 'design', description: 'test' }
+      ]
+    }
+  ];
+}
+
+function getProjects() {
+  return [
+    { id: 1, name: 'financial', description: 'test' },
+    { id: 2, name: 'software', description: 'test' },
+    { id: 3, name: 'hardware', description: 'test' },
+    { id: 4, name: 'HR', description: 'test' },
+    { id: 5, name: 'design', description: 'test' }
   ];
 }

@@ -1,0 +1,38 @@
+#dashboard-view {
+  margin: 2rem 0;
+
+  .dashboard-action {
+    display: flex;
+    justify-content: center;
+
+    button {
+      color: $color-white;
+      cursor: pointer;
+      margin: 1rem;
+
+      &.btn-search {
+        background-color: $color-blue;
+      }
+
+      &.btn-add {
+        background-color: $color-red;
+        border: solid rgba(154,20,82,1) 0;
+
+        a {
+          color: white;
+          text-decoration: none;
+
+          &:hover {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+
+      i {
+        color: $color-white;
+        margin-right: 10px;
+      }
+    }
+  }
+}

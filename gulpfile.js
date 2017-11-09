@@ -450,8 +450,8 @@ function getNodeOptions(isDev) {
     script: config.nodeServer,
     delayTime: 1,
     env: {
-      "PORT": port,
-      "NODE_ENV": isDev ? 'dev' : 'build'
+      'PORT': port,
+      'NODE_ENV': isDev ? 'dev' : 'build'
     },
     watch: [config.server]
   };

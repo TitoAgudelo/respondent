@@ -3,9 +3,8 @@
   display: none;
   height: 100%;
   overflow: auto;
-  padding: 1rem .5rem;
   position: fixed!important;
-  width: 30%;
+  width: 245px;
   z-index: 1;
 
   &.animation-left {
@@ -14,8 +13,14 @@
 
   .sidebar-header {
     align-items: center;
+    border-bottom: 1px solid $color-white;
     display: flex;
     justify-content: space-around;
+    padding: 0.5rem;
+
+    img {
+      width: 180px;
+    }
   }
 
   .close {
@@ -23,6 +28,61 @@
 
     span {
       color: $color-white;
+    }
+  }
+
+  .organization {
+    &-head {
+      color: $color-gray-dark;
+      font-size: 12px;
+      padding: 10px 2rem;
+      text-transform: uppercase;
+
+      i {
+        cursor: pointer;
+      }
+    }
+
+    &-content {
+      img {
+        margin-right: .5rem;
+        width: 12px;
+      }
+
+      &-link {
+        color: $color-gray-dark;
+        display: block;
+        font-size: 14px;
+        padding: 5px 2rem;
+
+        &:hover {
+          color: $color-white;
+          text-decoration: none;
+          background-color: $color-blue;
+        }
+      }
+
+      &-head {
+        color: $color-gray-dark;
+        font-size: 11px;
+        padding: 5px 2.5rem;
+      }
+
+      &-list {
+        a {
+          color: $color-white-alt;
+          display: block;
+          font-size: 11px;
+          padding: 2px 2.5rem;
+          text-transform: capitalize;
+
+          &:hover {
+            color: $color-white;
+            text-decoration: none;
+            background-color: $color-blue;
+          }
+        }
+      }
     }
   }
 }

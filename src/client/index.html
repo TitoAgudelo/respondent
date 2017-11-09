@@ -26,6 +26,8 @@
   <!-- endbower -->
   <!-- endbuild -->
 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" type="text/css">
+
   <!-- build:css styles/app.css -->
   <!-- inject:css -->
   <link rel="stylesheet" href="/.tmp/main.css">
@@ -67,16 +69,15 @@
   <!-- build:js js/app.js -->
   <!-- inject:js -->
   <script src="/src/client/app/app.module.js"></script>
-  <script src="/src/client/app/admin/admin.module.js"></script>
   <script src="/src/client/app/blocks/exception/exception.module.js"></script>
   <script src="/src/client/app/blocks/logger/logger.module.js"></script>
   <script src="/src/client/app/blocks/router/router.module.js"></script>
   <script src="/src/client/app/core/core.module.js"></script>
   <script src="/src/client/app/dashboard/dashboard.module.js"></script>
   <script src="/src/client/app/layout/layout.module.js"></script>
+  <script src="/src/client/app/organization/organization.module.js"></script>
+  <script src="/src/client/app/organizationDetail/detail.module.js"></script>
   <script src="/src/client/app/widgets/widgets.module.js"></script>
-  <script src="/src/client/app/admin/admin.controller.js"></script>
-  <script src="/src/client/app/admin/admin.route.js"></script>
   <script src="/src/client/app/blocks/exception/exception-handler.provider.js"></script>
   <script src="/src/client/app/blocks/exception/exception.js"></script>
   <script src="/src/client/app/blocks/logger/logger.js"></script>
@@ -91,6 +92,10 @@
   <script src="/src/client/app/layout/ht-top-nav.directive.js"></script>
   <script src="/src/client/app/layout/shell.controller.js"></script>
   <script src="/src/client/app/layout/sidebar.controller.js"></script>
+  <script src="/src/client/app/organization/organization.controller.js"></script>
+  <script src="/src/client/app/organization/organization.route.js"></script>
+  <script src="/src/client/app/organizationDetail/detail.controller.js"></script>
+  <script src="/src/client/app/organizationDetail/detail.route.js"></script>
   <script src="/src/client/app/widgets/ht-img-person.directive.js"></script>
   <script src="/src/client/app/widgets/ht-widget-header.directive.js"></script>
   <!-- endinject -->
@@ -101,15 +106,17 @@
 
   <script>
     function sidebar_open() {
-      document.getElementById("main").style.marginLeft = "30%";
-      document.getElementById("sidebar").style.width = "30%";
+      document.getElementById("main").style.marginLeft = "245px";
+      document.getElementById("sidebar").style.width = "245px";
       document.getElementById("sidebar").style.display = "block";
       document.getElementById("openNav").style.display = 'none';
+      document.getElementById("logo-nav").style.display = 'none';
     }
     function sidebar_close() {
       document.getElementById("main").style.marginLeft = "0%";
       document.getElementById("sidebar").style.display = "none";
       document.getElementById("openNav").style.display = "inline-block";
+      document.getElementById("logo-nav").style.display = 'inline-block';
     }
   </script>
 </body>
