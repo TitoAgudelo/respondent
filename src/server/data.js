@@ -33,11 +33,11 @@ function getOrganizations() {
         price: 0
       },
       projects: [
-        { id: 1, name: 'financial', description: 'test' },
-        { id: 2, name: 'software', description: 'test' },
-        { id: 3, name: 'hardware', description: 'test' },
-        { id: 4, name: 'HR', description: 'test' },
-        { id: 5, name: 'design', description: 'test' }
+        { id: 1, name: 'financial', description: 'test', status: 'success' },
+        { id: 2, name: 'software', description: 'test', status: 'paused' },
+        { id: 3, name: 'hardware', description: 'test', status: 'noset' },
+        { id: 4, name: 'HR', description: 'test', status: 'noset' },
+        { id: 5, name: 'design', description: 'test', status: 'paused' }
       ]
     }
   ];
@@ -45,10 +45,74 @@ function getOrganizations() {
 
 function getProjects() {
   return [
-    { id: 1, name: 'financial', description: 'test' },
-    { id: 2, name: 'software', description: 'test' },
-    { id: 3, name: 'hardware', description: 'test' },
-    { id: 4, name: 'HR', description: 'test' },
-    { id: 5, name: 'design', description: 'test' }
+    {
+      id: 1,
+      name: 'financial',
+      description: 'test',
+      status: 'success',
+      step: 3,
+      views: 20,
+      target: 1,
+      scheduled: 0,
+      attended: 0,
+      paid: 0,
+      respondent: 'Get Test',
+      incentive: 125
+    },
+    {
+      id: 2,
+      name: 'software',
+      description: 'test',
+      status: 'noset',
+      step: 1,
+      views: 20,
+      target: 1,
+      scheduled: 0,
+      attended: 0,
+      paid: 0,
+      respondent: 'Get Test',
+      incentive: 125
+    },
+    {
+      id: 3,
+      name: 'hardware',
+      description: 'test',
+      status: 'paused',
+      step: 1,
+      views: 20,
+      target: 1,
+      scheduled: 0,
+      attended: 0,
+      paid: 0,
+      respondent: 'Get Test',
+      incentive: 125
+    },
+    { id: 4,
+      name: 'HR',
+      description: 'test',
+      status: 'paused',
+      step: 1,
+      views: 20,
+      target: 1,
+      scheduled: 0,
+      attended: 0,
+      paid: 0,
+      respondent: 'Get Test',
+      incentive: 125
+    },
+    {
+      id: 5,
+      name: 'design',
+      description: 'test',
+      status: 'success',
+      step: 1,
+      views: 20,
+      target: 1,
+      scheduled: 0,
+      attended: 0,
+      paid: 0,
+      respondent: 'Get Test',
+      incentive: 125
+    }
   ];
 }

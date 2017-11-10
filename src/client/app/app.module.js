@@ -7,7 +7,8 @@
     'app.dashboard',
     'app.layout',
     'app.organizations',
-    'app.detail'
+    'app.detail',
+    'app.project'
   ]);
 
 })();

@@ -6,7 +6,7 @@ router.get('/people', getPeople);
 router.get('/person/:id', getPerson);
 router.get('/organizations', getOrganizations);
 router.get('/organizations/:id', getOrganization);
-router.get('/projects/:id', getproject);
+router.get('/project/:id', getproject);
 router.get('/*', four0four.notFoundMiddleware);
 
 module.exports = router;

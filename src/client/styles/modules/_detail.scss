@@ -44,7 +44,12 @@
         font-size: 13px;
         padding-bottom: 8px;
 
-        &.active, &:hover {
+        &:hover {
+          box-shadow: inset 0 -3px #b7bfc6;
+          border: 0;
+        }
+
+        &.active {
           box-shadow: inset 0 -3px #14aaf5;
           border: 0;
           color: $color-black;
@@ -60,6 +65,81 @@
       background-color: $color-white;
       border-radius: 3px 3px 0 0;
       box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+      padding: 1rem;
+
+      .btn-add {
+        background: $color-white;
+        border-color: $color-blue;
+        color: $color-blue;
+        cursor: pointer;
+        fill: $color-blue;
+
+        &:hover {
+          border-color: $color-white;
+          box-shadow: 0 0 0 3px $color-blue;
+          color: $color-blue;
+          fill: $color-blue;
+        }
+      }
+    }
+
+    &-project {
+      margin: 2rem 0;
+      border-radius: 3px;
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    &-list {
+      border-bottom: 1px solid #eee;
+      padding: 1rem;
+      position: relative;
+
+      .name {
+        color: $color-black;
+        text-decoration: none;
+      }
+
+      .fa-star {
+        color: $color-yellow;
+      }
+
+      .noset {
+        background-color: $color-yellow;
+        content: ' ';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 3px;
+      }
+
+      .paused {
+        background-color: $color-red;
+        content: ' ';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 3px;
+      }
+
+      .success {
+        background-color: $color-green;
+        content: ' ';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 3px;
+      }
     }
   }
 }

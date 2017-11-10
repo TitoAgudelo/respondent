@@ -1,0 +1,146 @@
+<section class="project">
+  <div class="container">
+
+  </div>
+</section>
+<section class="project-tabs">
+  <div class="container">
+    <div class="row project-head">
+      <h1 class="text-center">{{vm.project.name}}</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="overview-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="payments-tab" data-toggle="tab" href="#payments" role="tab" aria-controls="payments" aria-selected="false">Payments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="view-tab" data-toggle="tab" href="#view" role="tab" aria-controls="view" aria-selected="false">View/Edit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="responses-tab" data-toggle="tab" href="#responses" role="tab" aria-controls="responses" aria-selected="false">Responses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="calendars-tab" data-toggle="tab" href="#calendars" role="tab" aria-controls="calendars" aria-selected="false">Calendars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="bookings-tab" data-toggle="tab" href="#bookings" role="tab" aria-controls="bookings" aria-selected="false">Bookings</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="project-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div class="project-content-progress">
+                <div class="progress-detail">
+                  <span>Launch Project</span>
+                  <span>Setup Calendar</span>
+                  <span>Review & Invite</span>
+                  <span>Record Attendance</span>
+                  <span>Pay & Close</span>
+                </div>
+                <div class="progress">
+                  <div data-ng-class="{'bg-disabled': vm.project.step < 1}" class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">step 1</div>
+                  <div data-ng-class="{'bg-disabled': vm.project.step < 2}" class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">step 2</div>
+                  <div data-ng-class="{'bg-disabled': vm.project.step < 3}" class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">step 3</div>
+                  <div data-ng-class="{'bg-disabled': vm.project.step < 4}" class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">step 4</div>
+                  <div data-ng-class="{'bg-disabled': vm.project.step < 5}" class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">step 5</div>
+                </div>
+              </div>
+              <div class="project-content-cards">
+                <div class="project-content-cards-card">
+                  <h3>Views</h3>
+                  <p>{{vm.project.views}}</p>
+                </div>
+                <div class="project-content-cards-card">
+                  <h3>Target</h3>
+                  <p>{{vm.project.target}}</p>
+                </div>
+                <div class="project-content-cards-card">
+                  <h3>Scheduled</h3>
+                  <p>{{vm.project.scheduled}}</p>
+                </div>
+                <div class="project-content-cards-card">
+                  <h3>Attended</h3>
+                  <p>{{vm.project.attended}}</p>
+                </div>
+                <div class="project-content-cards-card">
+                  <h3>Paid</h3>
+                  <p>{{vm.project.paid}}</p>
+                </div>
+              </div>
+              <div class="project-content-detail">
+                <h3>Project Detail</h3>
+                <div class="project-content-detail-item">
+                  <span class="project-title">Name: </span>
+                  <span class="project-description">{{vm.project.name}}</span>
+                </div>
+                <div class="project-content-detail-item">
+                  <span class="project-title">Respondent Pitch: </span>
+                  <span class="project-description">{{vm.project.respondent}}</span>
+                </div>
+                <div class="project-content-detail-item">
+                  <span class="project-title">Remote Details: </span>
+                  <span class="project-description">gotomeeting.james.123</span>
+                </div>
+                <div class="project-content-detail-item">
+                  <span class="project-title">Incentive: </span>
+                  <span class="project-description">${{vm.project.incentive}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="payments" role="tabpanel" aria-labelledby="payments-tab">
+              <h3></h3>payments
+              <div class="billing-review-panel-inner">
+                <h4>Payment Summary</h4>
+                <p>Feature not included in this integration</p>
+                <div class="billing-item ng-scope">
+                  <span class="billing-item-label"><strong>Deposit Balance</strong></span>
+                  <span class="billing-item-value ng-binding"></span>
+                </div>
+                <div class="billing-item">
+                  <span class="billing-item-label indented">Total Recruitment Fee</span>
+                  <span class="billing-item-value ng-binding">$0.00</span>
+                </div>
+
+                <div class="billing-item ng-scope">
+                  <span class="billing-item-label indented">Total Incentive</span>
+                  <span class="billing-item-value ng-binding" >$0</span>
+                </div>
+                <div class="billing-item billing-item-total">
+                    <span class="billing-item-label">Total</span>
+                    <span class="billing-item-value ng-binding">$0.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="view" role="tabpanel" aria-labelledby="view-tab">
+              <h3>View / Edit</h3>
+              <p>Feature not included in this integration</p>
+              <button class="btn btn-add">Edit</button>
+            </div>
+            <div class="tab-pane fade" id="responses" role="tabpanel" aria-labelledby="responses-tab">
+              <h3>responses</h3>
+              <p>Feature not included in this integration</p>
+            </div>
+            <div class="tab-pane fade" id="calendars" role="tabpanel" aria-labelledby="calendars-tab">
+              <h3>calendars</h3>
+              <p>Feature not included in this integration</p>
+            </div>
+            <div class="tab-pane fade" id="bookings" role="tabpanel" aria-labelledby="bookings-tab">
+              <h3>bookings</h3>
+              <p>Feature not included in this integration</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

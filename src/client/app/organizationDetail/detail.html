@@ -52,11 +52,24 @@
     <div class="row">
       <div class="col-md-12">
         <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-          <div class="tab-pane fade" id="people" role="tabpanel" aria-labelledby="profile-tab">...</div>
-          <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="contact-tab">...</div>
-          <div class="tab-pane fade" id="payments" role="tabpanel" aria-labelledby="contact-tab">...</div>
-          <div class="tab-pane fade" id="credits" role="tabpanel" aria-labelledby="contact-tab">...</div>
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div>
+              <button class="btn btn-add">Add Project</button>
+            </div>
+            <div class="detail-content-project">
+              <div class="detail-content-list" data-ng-repeat="project in vm.organization.projects">
+                <a href="/project/{{project.id}}">
+                <span class="label {{project.status}}"></span>
+                <span class="name">{{project.name}}</span>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="people" role="tabpanel" aria-labelledby="profile-tab">people</div>
+          <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="contact-tab">settings</div>
+          <div class="tab-pane fade" id="payments" role="tabpanel" aria-labelledby="contact-tab">payments</div>
+          <div class="tab-pane fade" id="credits" role="tabpanel" aria-labelledby="contact-tab">credits</div>
         </div>
       </div>
     </div>

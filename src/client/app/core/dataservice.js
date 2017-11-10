@@ -13,6 +13,7 @@
       getMessageCount: getMessageCount,
       getOrganizations: getOrganizations,
       getOrganizationDetail: getOrganizationDetail,
+      getProject: getProject
     };
 
     return service;
@@ -49,6 +50,20 @@
 
     function getOrganizationDetail(id) {
       return $http.get('/api/organizations/' + id)
+        .then(success)
+        .catch(fail)
+
+      function success(response) {
+        return response.data;
+      }
+
+      function fail(e) {
+        return exception.catcher('XHR Failed for getOrganizations')(e);
+      }
+    }
+
+    function getProject(id) {
+      return $http.get('/api/project/' + id)
         .then(success)
         .catch(fail)
 
